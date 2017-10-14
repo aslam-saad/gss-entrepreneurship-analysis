@@ -61,7 +61,8 @@ gss_slf %>%
      ggplot(aes(x = year, y = N, color = sex)) + 
      geom_line(size = .9) + 
      theme_bw() + 
-     labs(title = "Self-Employed Proportion for Different Genders", caption = "Data Source: gss.norc.org",x = "YEAR", y = "SELF-EMPLOYED (PROP)")+
+     labs(title = "Self-Employed Proportion for Different Genders", caption = "Data Source: gss.norc.org",
+     x = "YEAR", y = "SELF-EMPLOYED (PROP)")+
      scale_x_continuous(breaks = seq(1972,2012,2), labels = seq(1972,2012,2)) +
      scale_y_continuous(breaks = seq(.04,.20,.01), labels = seq(.04,.20,.01)) +
      scale_color_discrete(name = "GENDER")+
@@ -73,7 +74,7 @@ gss_slf %>%
            legend.text = element_text(size = 10))
 ```
 
-![](stat_inf_project_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](figs/unnamed-chunk-2-1.png)
 
 *There is a significant difference in proportion of self-employed for different genders.*
 
@@ -91,15 +92,16 @@ gss_slf %>%
      geom_point(shape = 21, fill = "cornsilk", color = "black") + 
      scale_size_area(name = "PROPOTION", guide = FALSE, max_size = 14)+
      geom_text(aes(y = as.numeric(relig) - sqrt(N)/5, label = round(N, 2)), color = "grey60", size = 4, vjust = 2)+
-     labs(title = "Self-Employed Proportion for Different Religions", caption = "Data Source: gss.norc.org",x = "YEAR", y = "RELIGION")+
+     labs(title = "Self-Employed Proportion for Different Religions", caption = "Data Source: gss.norc.org",
+     x = "YEAR", y = "RELIGION")+
      theme(plot.title = element_text(size = 12, color = "darkred", hjust = .5),
            plot.caption = element_text(color = "darkred"),
-         axis.text.x = element_text(size = 10, angle = 30, hjust = 1, color = "black"), 
+           axis.text.x = element_text(size = 10, angle = 30, hjust = 1, color = "black"), 
            axis.text.y = element_text(size = 10, color = "black"),
            axis.title = element_text(family = "Times", size = 12, color = "darkred"))
 ```
 
-![](stat_inf_project_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](figs/unnamed-chunk-3-1.png)
 
 *There is a significant difference in proportion of self-employed for each religion group.*
 
@@ -149,7 +151,7 @@ inference(data = gss_slf, x = sex, y = wrkslf,
     ## z = 24.4841
     ## p_value = < 0.0001
 
-![](stat_inf_project_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](figs/unnamed-chunk-5-1.png)
 
 *With the p-value &lt;= 0.0001, we reject the null hypothesis. We have convincing evidence that the proportion of self-employed men is greater than proportion of self-employed women in the U.S.*
 
