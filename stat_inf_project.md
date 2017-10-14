@@ -114,12 +114,12 @@ Part 4: Inference
 
 **State Hypothesis**
 
-**Null Hypothesis**: The difference in proportions of self-employed between two genders is zero.
+**Null Hypothesis**: The difference in proportions of self-employed between two genders is zero.    
 **Alternative Hypothesis**: Proportion of self-employed males is greater than Proportion of self-employed females.
 
 **Check Conditions**
 
-**1. Independence**: The observations in each group are independent from the random sampling conducted in GSS survey.
+**1. Independence**: The observations in each group are independent from the random sampling conducted in GSS survey.   
 **2. Sample size**: To check the sample size, we need to find out first the pooled proportion which is expressed in this context as number of self-employed men and women / total number of men and women.
 
 ``` r
@@ -159,13 +159,13 @@ inference(data = gss_slf, x = sex, y = wrkslf,
 
 **Hypothesis**
 
-**Null Hypothesis**: There is no difference in proportions of self-employed people with different religions, and any observed differences are due to chance.
+**Null Hypothesis**: There is no difference in proportions of self-employed people with different religions, and any observed differences are due to chance.      
 **Alternative Hypothesis**: There is a difference in proportion f self-employed between at least two groups.
 
 *Since There are two Ctegorical variables, with a variable (relig) which contains more than two levels, the performed test is chi-sq test.*
 **Check Conditions**
 
-**1. Independence**: The observations in each group are independent from the random sampling conducted in GSS survey.
+**1. Independence**: The observations in each group are independent from the random sampling conducted in GSS survey.    
 **2. Expected counts**: The expected count is above the minimum of 5 for each cell.
 
 **Chi-Squared goodness of fit**
