@@ -154,7 +154,7 @@ inference(data = gss_slf, x = sex, y = wrkslf,
 
 *With the p-value &lt;= 0.0001, we reject the null hypothesis. We have convincing evidence that the proportion of self-employed men is greater than proportion of self-employed women in the U.S.*
 
-**2- Does the likelihood of being self-employed differ significantly by gender or religion?**
+**2- Does the likelihood of being self-employed differ significantly by religion?**
 
 **Hypothesis**
 
