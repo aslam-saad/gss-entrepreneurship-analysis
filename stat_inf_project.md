@@ -23,7 +23,6 @@ Part 1: Data
 
 The General Social Survey (GSS) monitors societal change and studies the growing complexity of American society. The GSS \[gathers data\] in order to monitor and explain trends and constants in attitudes, behaviors, and attributes; to examine the structure and functioning of society in general as well as the role played by relevant subgroups; to compare the United States to other societies in order to place American society in comparative perspective and develop cross-national models of human society; and to make high-quality data easily accessible to scholars, students, policy makers, and others, with minimal cost and waiting.
 
-**As the respondents' were selected randomly by household based and age 18+, we cannot generalize to the entire United States population. children, and non-home-owners are not represented in the data set**
 
 ------------------------------------------------------------------------
 
@@ -50,7 +49,7 @@ gss_slf <- gss %>%
 Part 3: Exploratory data analysis
 ---------------------------------
 
-**1- Are there any differences between the two genders in entrepreneurship.**
+**1- Does the likelihood of being self-employed differ significantly by gender?**
 
 ``` r
 gss_slf %>%
@@ -76,9 +75,9 @@ gss_slf %>%
 
 ![](figs/unnamed-chunk-2-1.png)
 
-*There is a significant difference in proportion of self-employed for different genders.*
+*There is a significant difference in the sample proportion of self-employed for different genders.*
 
-**1- Are there any differences in entrepreneurship between people with different religions.**
+**1- Does the likelihood of being self-employed differ significantly by religion?**
 
 ``` r
 gss_slf %>%
@@ -103,14 +102,14 @@ gss_slf %>%
 
 ![](figs/unnamed-chunk-3-1.png)
 
-*There is a significant difference in proportion of self-employed for each religion group.*
+*There is a significant difference in the sample proportion of self-employed for each religion group.*
 
 ------------------------------------------------------------------------
 
 Part 4: Inference
 -----------------
 
-**1- Are there any differences between the two genders in entrepreneurship.**
+**1- Does the likelihood of being self-employed differ significantly by gender**
 
 **State Hypothesis**
 
@@ -155,7 +154,7 @@ inference(data = gss_slf, x = sex, y = wrkslf,
 
 *With the p-value &lt;= 0.0001, we reject the null hypothesis. We have convincing evidence that the proportion of self-employed men is greater than proportion of self-employed women in the U.S.*
 
-**2- Are there any differences between people with different religions in entrepreneurship.**
+**2- Does the likelihood of being self-employed differ significantly by gender or religion?**
 
 **Hypothesis**
 
