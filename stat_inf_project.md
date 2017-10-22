@@ -161,7 +161,9 @@ inference(data = gss_slf, x = sex, y = wrkslf,
 **Null Hypothesis**: There is no difference in proportions of self-employed people with different religions, and any observed differences are due to chance.      
 **Alternative Hypothesis**: There is a difference in proportion f self-employed between at least two groups.
 
-*Since There are two Ctegorical variables, with a variable (relig) which contains more than two levels, the performed test is chi-sq test.*
+*Since There are two Ctegorical variables, with a variable (relig) which contains more than two levels, 
+the performed test is chi-sq test.*     
+
 **Check Conditions**
 
 **1. Independence**: The observations in each group are independent from the random sampling conducted in GSS survey.    
