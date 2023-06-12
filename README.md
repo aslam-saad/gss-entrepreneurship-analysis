@@ -8,8 +8,16 @@ The General Social Survey (GSS) is a comprehensive study that aims to monitor so
 The GSS dataset, which has been loaded into the R environment, serves as the primary source of information for this analysis. It contains variables such as gender, religion, employment type (self-employed or working for someone else), and year.
 
 ``` r
+# Load libraries
+library(ggplot2)
+library(dplyr)
+library(forcats)
+library(statsr)
+
+# Load data
 load("gss.Rdata")
 
+# Remove missing data 
 gss_slf <- gss %>%
     select(sex, relig, wrkslf, year) %>%
     filter(!is.na(sex), !is.na(relig), !is.na(wrkslf), !is.na(year))
