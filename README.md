@@ -38,6 +38,8 @@ To test the hypothesis of gender differences in entrepreneurial tendencies, we s
 
 Conducting a t-test, we find a p-value less than 0.0001, leading us to reject the null hypothesis. This provides convincing evidence that the proportion of self-employed men is greater than the proportion of self-employed women in the United States.
 
+![](figs/unnamed-chunk-5-1.png)
+
 #### Religion Differences
 
 To examine the hypothesis of religion differences in entrepreneurial tendencies, we set up the following hypotheses:
