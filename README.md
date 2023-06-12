@@ -1,54 +1,85 @@
-## Research Analysis: Gender and Religion Differences in Entrepreneurship
+# Gender and Religion Differences in Entrepreneurship
 
-### Introduction
+## Introduction
 
-This research study explores the relationship between gender, religion, and entrepreneurship using data from the General Social Survey (GSS). The GSS is a comprehensive survey that monitors societal change and investigates various aspects of American society. The aim of this analysis is to examine whether there are any differences in entrepreneurial tendencies between genders and across different religious groups.
+This research aims to investigate the differences in entrepreneurship between genders and across different religious groups. By analyzing the General Social Survey (GSS) data, we will explore the proportions of self-employed individuals and determine if there are any significant variations.
 
-### Data
+## Setup
 
-The GSS collects data to monitor and explain trends and constants in attitudes, behaviors, and attributes of individuals. It also compares the United States to other societies, aiming to develop cross-national models of human society. The data used in this analysis includes variables such as gender, religion, employment status (self-employed or working for someone else), and year of survey.
+### Load packages
 
-### Research Questions
+```r
+library(ggplot2)
+library(dplyr)
+library(forcats)
+library(statsr)
+```
 
-1. Are there significant differences in entrepreneurial tendencies between genders?
-2. Do different religious groups exhibit variations in entrepreneurial tendencies?
+### Load data
 
-### Exploratory Data Analysis
+```r
+load("gss.Rdata")
+```
 
-#### Gender Differences
+## Part 1: Data
 
-To investigate gender differences in entrepreneurship, we first analyze the proportion of self-employed individuals over the years for different genders. The analysis reveals a significant difference in the sample proportion of self-employed individuals between genders. The plot below depicts the trend:
+The General Social Survey (GSS) monitors societal change and studies the growing complexity of American society. The GSS gathers data to monitor and explain trends and constants in attitudes, behaviors, and attributes, examine the structure and functioning of society, compare the United States to other societies, and make high-quality data easily accessible to scholars, students, policymakers, and others.
 
-![Self-Employed Proportion for Different Genders](figs/unnamed-chunk-2-1.png)
+## Part 2: Research Question
 
-#### Religion Differences
+In this analysis, we aim to investigate the differences in entrepreneurship between genders and across different religious groups. We will explore the variables "sex," "relig," "wrkslf," and "year" to examine the proportions of self-employed individuals and determine if there are any significant variations.
 
-Next, we examine the proportion of self-employed individuals across different religious groups. The analysis shows a significant difference in the sample proportion of self-employed individuals among various religious groups. The plot below illustrates the findings:
+The variables used in this analysis are:
 
-![Self-Employed Proportion for Different Religions](figs/unnamed-chunk-3-1.png)
+- `sex`: A categorical variable indicating the gender of the respondent.
+- `relig`: A categorical variable indicating the religion of the respondent.
+- `wrkslf`: A categorical variable indicating whether the respondent is self-employed or works for someone else.
+- `year`: The year of the survey response.
 
-### Inference
+## Part 3: Exploratory Data Analysis
 
-#### Gender Differences
+### Analysis 1: Gender Differences in Entrepreneurship
 
-To test the hypothesis of gender differences in entrepreneurial tendencies, we set up the following hypotheses:
+We begin by examining the likelihood of being self-employed for different genders over time. The line plot displays the proportions of self-employed individuals for males and females from 1972 to 2012. From the plot, it is evident that there is a significant difference in the sample proportion of self-employed individuals between the two genders.
 
-- Null Hypothesis (H0): The difference in proportions of self-employed between genders is zero.
-- Alternative Hypothesis (HA): Proportion of self-employed males is greater than proportion of self-employed females.
+![Gender Differences in Self-Employment](figs/unnamed-chunk-2-1.png)
 
-Conducting a t-test, we find a p-value less than 0.0001, leading us to reject the null hypothesis. This provides convincing evidence that the proportion of self-employed men is greater than the proportion of self-employed women in the United States.
+### Analysis 2: Differences in Entrepreneurship by Religion
 
-![](figs/unnamed-chunk-5-1.png)
+Next, we investigate the differences in self-employment proportions across different religious groups. The scatter plot illustrates the proportions of self-employed individuals for each religion from 2000 onwards. The size of the points represents the proportion, with larger points indicating a higher proportion of self-employed individuals. The plot clearly demonstrates that there are significant variations in the sample proportions of self-employed individuals among different religious groups.
 
-#### Religion Differences
+![Differences in Self-Employment by Religion](figs/unnamed-chunk-3-1.png)
 
-To examine the hypothesis of religion differences in entrepreneurial tendencies, we set up the following hypotheses:
+## Part 4: Inference
 
-- Null Hypothesis (H0): There is no difference in proportions of self-employed people with different religions, and any observed differences are due to chance.
-- Alternative Hypothesis (HA): There is a difference in proportion of self-employed individuals between at least two religious groups.
+### Hypothesis Test 1: Gender Differences in Entrepreneurship
 
-Performing a Chi-Squared goodness-of-fit test, we obtain a p-value less than 0.0001, indicating that the null hypothesis can be rejected. Hence, there is convincing evidence that the proportion of self-employed individuals differs across various religious groups.
+#### State Hypotheses
 
-### Conclusion
+- Null Hypothesis: There is no difference in the proportions of self-employed individuals between genders.
+- Alternative Hypothesis: There is a difference in the proportions of self-employed individuals between genders.
 
-The analysis reveals significant gender and religion differences in entrepreneurial tendencies. Men have a higher proportion of self-employment compared to women, while variations in self-employment proportions exist among different religious groups. These findings provide valuable insights into the dynamics of entrepreneurship in the United States, emphasizing the importance of considering gender and religion factors in entrepreneurial research and policy-making.
+#### Test Results
+
+Based on a hypothesis test using the data from 1972 to 2012, we obtained a p-value of less than 0.05, indicating strong evidence to reject the null hypothesis. Thus, we conclude that there is a significant difference in the proportions of self-employed individuals between males and females.
+
+### Hypothesis Test 2: Differences in Entrepreneurship by Religion
+
+#### State Hypotheses
+
+- Null Hypothesis: There is no difference in the proportions of self-employed individuals among different religious groups.
+- Alternative Hypothesis: There is a difference in the proportions of self-employed individuals among different religious groups.
+
+#### Test Results
+
+By conducting a hypothesis
+
+ test using data from 2000 onwards, we obtained a p-value of less than 0.05, providing strong evidence to reject the null hypothesis. Hence, we conclude that there are significant differences in the proportions of self-employed individuals among different religious groups.
+
+## Conclusion
+
+This analysis explored the proportions of self-employed individuals based on gender and religion using the General Social Survey data. The findings revealed significant differences in entrepreneurship between genders, with a higher proportion of self-employed individuals among males. Additionally, there were notable variations in self-employment proportions across different religious groups.
+
+These findings have important implications for understanding the dynamics of entrepreneurship in the United States. They suggest that gender and religion play significant roles in shaping the likelihood of individuals becoming self-employed. Policymakers and researchers can utilize these insights to develop targeted interventions and initiatives to foster entrepreneurship among underrepresented groups.
+```
+
